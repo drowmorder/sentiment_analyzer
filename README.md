@@ -87,32 +87,38 @@ Follow these steps to get the project up and running locally:
     git clone https://github.com/drowmorder/sentiment_analyzer.git
     cd sentiment_analyzer
     ```
+2.  **Install Python**
+    [Python](https://www.python.org/downloads/)
 
-2.  **Create and Activate a Virtual Environment:**
+3.  **Create and Activate a Virtual Environment:**
     ```bash
     python -m venv django_venv
-    source django_venv/bin/activate  # On Linux/macOS
-    # django_venv\Scripts\activate   # On Windows (use git bash or similar for 'source')
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process    
+    django_venv\Scripts\activate   # On Windows (use git bash or similar for 'source')
+    # source django_venv/bin/activate  # On Linux/macOS
     ```
-
-3.  **Install Dependencies:**
+4. **Install Pytorch**
+    ```bash
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+    ```
+5.  **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Download GloVe Embeddings:**
+6.  **Download GloVe Embeddings:**
     The CNN model requires specific pre-trained GloVe embeddings (`glove.6B.100d.txt`).
     * Download `glove.6B.zip` from the [GloVe website (Stanford NLP)](https://nlp.stanford.edu/projects/glove/).
     * Extract the `glove.6B.100d.txt` file from the downloaded zip.
     * **Place the `glove.6B.100d.txt` file into the `data/` directory within your cloned project.** (e.g., `[YOUR_REPO_NAME]/data/glove.6B.100d.txt`)
 
-5.  **Run Django Migrations:**
+7.  **Run Django Migrations:**
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     ```
 
-6.  **Start the Django Development Server and Open Application:**
+8.  **Start the Django Development Server and Open Application:**
     * **Option A (Recommended for Windows): Use the provided batch script:**
         After completing the above steps, simply double-click the `start_server.bat` file located in the project root. This script will automatically start the Django development server and open the application's starting page in your default web browser.
     * **Option B (Manual): Run the server and open browser separately:**
@@ -241,13 +247,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
     git clone https://github.com/drowmorder/sentiment_analyzer.git
     cd sentiment_analyzer
     ```
+2. **Установите Python**
+    [Python](https://www.python.org/downloads/)
 
-2.  **Создайте и активируйте виртуальное окружение:**
+3.  **Создайте и активируйте виртуальное окружение:**
     ```bash
     python -m venv django_venv
-    source django_venv/bin/activate  # Для Linux/macOS
-    # django_venv\Scripts\activate   # Для Windows (используйте git bash или аналогичный для 'source')
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process 
+    django_venv\Scripts\activate   # Для Windows (используйте git bash или аналогичный для 'source')
+    # source django_venv/bin/activate  # Для Linux/macOS
     ```
+4. **Установите Pytorch**
+   ```bash
+   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+   ```
 
 3.  **Установите зависимости:**
     ```bash
