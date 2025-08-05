@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ настроений: {{ model_name|title }}</title> {# Display model name in title #}
+    <style>
+        /* Page styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f2f5; 
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px; 
+            width: 100%;
+        }
+
+        /* Title and description */
+        h1 {
+            color: #2c3e50; 
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .description {
+            color: #7f8c8d; 
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 2em;
+        }
+
+        /* Styles */
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        textarea {
+            width: calc(100% - 40px); 
+            max-width: 700px; 
+            min-height: 120px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            resize: vertical; 
+        }
+
+        textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+            outline: none;
+        }
+
+        /* Buttons */
+        .model-button { 
+            display: inline-block;
+            background-color: #3498db; 
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none; 
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .model-button:hover {
+            background-color: #2980b9; 
+            transform: scale(1.05);
+        }
+
+        /* Syles for result box */
+        .result-box {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 8px;
+            background-color: #e9f5ff; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border: 1px solid #cfe2ff; 
+        }
+
+        .result-box h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .result-box p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .result-box strong {
+            color: #34495e;
+        }
+
+        /* Syles for sentiment */
+        .sentiment-positive {
+            color: #27ae60; 
+            font-weight: bold;
+        }
+        .sentiment-negative {
+            color: #e74c3c; 
+            font-weight: bold;
+        }
+        .sentiment-neutral {
+            color: #f39c12; 
+            font-weight: bold;
+        }
+
+        /* Error messages */
+        .error-message {
+            color: #c0392b; 
+            background-color: #fce4e4; 
+            border: 1px solid #c0392b;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* link back */
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        /* Animations (copy from index.html) */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #e3f2fd, #e8f5e9);
+            opacity: 0.5;
+            z-index: -1;
+            animation: gradient-anim 15s ease infinite;
+        }
+        
+        @keyframes gradient-anim {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis with {{ model_name }}</h1>
+        <p class="description">
+            Enter the text of a movie review to analyze its sentiment using the selected model.
+        </p>
+
+        {% if error_message %}
+            <p class="error-message">{{ error_message }}</p>
+        {% endif %}
+
+        <form action="{% url 'sentiment_app:analyze' model_name=model_name %}" method="post">
+            {% csrf_token %}
+            <textarea name="review_text" placeholder="Enter your review text here..." required>{{ review_text }}</textarea>
+            <button type="submit" class="model-button">Analyze</button>
+        </form>
+
+        {% if sentiment_result %}
+            <div class="result-box">
+                <h3>Analysis Result:</h3>
+                <p>Your Review: "<strong>{{ review_text|truncatechars:100 }}</strong>"</p>
+                <p>Sentiment: 
+                    <span class="{% if sentiment_result == 'Positive' %}sentiment-positive{% elif sentiment_result == 'Negative' %}sentiment-negative{% else %}sentiment-neutral{% endif %}">
+                        {{ sentiment_result }}
+                    </span>
+                </p>
+                <p>Rating (out of 10): <strong>{{ rating }}</strong></p>
+            </div>
+        {% endif %}
+
+        <a href="{% url 'sentiment_app:index' %}" class="back-link">← Back to Main Page</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+# This .gitignore file is tailored for a Python/Django/PyTorch project.
+# Created from gitignore.io (python, django templates) and customized.
+
+# --- Virtual Environments & Python specific ---
+.venv/
+venv/
+env/
+.Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test / Coverage Reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+
+# IDE specific files
+.idea/          # PyCharm
+.vscode/        # VS Code
+*.sublime-project
+*.sublime-workspace
+.project        # Eclipse
+.pydevproject   # PyDev
+
+# OS generated files
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# --- Django specific ---
+*.log           # Django logs
+db.sqlite3      # Default SQLite database
+local_settings.py # Sensitive settings that should not be committed
+media/          # User-uploaded files (if used)
+
+# Uncomment the line below if you collect static files into a single directory
+# and do not want to commit them to Git (common for deployment).
+# staticfiles/
+
+# --- Project-specific (Models & Data) ---
+# Saved Machine Learning Models
+# If your models are large and you don't want to commit them directly,
+# keep these lines. Provide download instructions in your README.md.
+# If you *do* want to version them (e.g., using Git LFS), remove these lines.
+*.joblib        # Scikit-learn models
+*.pt            # PyTorch models
+*.pth           # PyTorch models (alternative extension)
+
+# Large data files or temporary data outputs
+# Add specific data directories if they contain large files not meant for Git.
+# Example: /data/raw_downloads/
+/data/extractedData/aclImdb/
+data/aclImdb_v1.tar.gz
+data/extractedData/glove.6B.100d.txt
