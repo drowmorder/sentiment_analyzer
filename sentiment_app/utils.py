@@ -19,18 +19,18 @@ CNN_tokenizer = None
 
 SUPPORTED_MODELS = ['CNN_model.pt', 'lr_model.joblib', 'rf_model.joblib']
 
-# try:
-#     nltk.data.find('tokenizers/punkt')
-# except nltk.downloader.DownloadError:
-#     nltk.download('punkt')
-# try:
-#     nltk.data.find('corpora/stopwords')
-# except nltk.downloader.DownloadError:
-#     nltk.download('stopwords')
-# try:
-#     nltk.data.find('corpora/wordnet')
-# except nltk.downloader.DownloadError:
-#     nltk.download('wordnet')
+try:
+    nltk.data.find('tokenizers/punkt')
+except nltk.downloader.DownloadError:
+    nltk.download('punkt')
+try:
+    nltk.data.find('corpora/stopwords')
+except nltk.downloader.DownloadError:
+    nltk.download('stopwords')
+try:
+    nltk.data.find('corpora/wordnet')
+except nltk.downloader.DownloadError:
+    nltk.download('wordnet')
 
 def load_models():
     global cnn_model, lr_model, tfidf_vectorizer, CNN_tokenizer
