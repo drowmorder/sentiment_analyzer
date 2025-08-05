@@ -84,15 +84,15 @@ Follow these steps to get the project up and running locally:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [YOUR_REPO_URL_HERE]
-    cd IMDb-Movie-Review-Sentiment-Analyzer # Or whatever your repo folder name is
+    git clone https://github.com/drowmorder/sentiment_analyzer.git
+    cd sentiment_analyzer
     ```
 
 2.  **Create and Activate a Virtual Environment:**
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    # venv\Scripts\activate   # On Windows (use git bash or similar for 'source')
+    python -m venv django_venv
+    source django_venv/bin/activate  # On Linux/macOS
+    # django_venv\Scripts\activate   # On Windows (use git bash or similar for 'source')
     ```
 
 3.  **Install Dependencies:**
@@ -238,15 +238,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 1.  **Клонируйте репозиторий:**
     ```bash
-    git clone [ВАШ_URL_РЕПОЗИТОРИЯ]
-    cd IMDb-Movie-Review-Sentiment-Analyzer # Или название папки вашего репозитория
+    git clone https://github.com/drowmorder/sentiment_analyzer.git
+    cd sentiment_analyzer
     ```
 
 2.  **Создайте и активируйте виртуальное окружение:**
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # Для Linux/macOS
-    # venv\Scripts\activate   # Для Windows (используйте git bash или аналогичный для 'source')
+    python -m venv django_venv
+    source django_venv/bin/activate  # Для Linux/macOS
+    # django_venv\Scripts\activate   # Для Windows (используйте git bash или аналогичный для 'source')
     ```
 
 3.  **Установите зависимости:**
