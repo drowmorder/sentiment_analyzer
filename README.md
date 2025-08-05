@@ -8,9 +8,6 @@
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.x%2B-red?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-[Optional: Live Demo Link - Highly Recommended!]
-🌐 **Live Demo:** [YOUR_LIVE_DEMO_URL_HERE] - **Remember to update this with your live deployment link once available!**
-
 ### Table of Contents
 - [English](#english)
     - [Project Overview](#project-overview)
@@ -130,7 +127,7 @@ Follow these steps to get the project up and running locally:
 3.  Enter the movie review text into the provided text area.
 4.  Click the "Analyze" button to instantly receive the predicted sentiment and the corresponding 1-10 rating.
 
-### Screenshots
+### Screenshots (incoming)
 * **Recommendation:** This section is crucial! **Please replace this text with high-quality screenshots or a GIF demonstrating your app.**
 * **What to include:**
     * A screenshot of the initial model selection page.
@@ -184,8 +181,8 @@ Follow these steps to get the project up and running locally:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### Contact
-* **[Your Name]**
-* **LinkedIn:** [Your LinkedIn Profile URL]
+* **Kozhukhovskiy Dmitriy**
+* **Links:** [Your link URL]
 
 ---
 
@@ -283,7 +280,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3.  Введите текст рецензии фильма в предоставленную текстовую область.
 4.  Нажмите кнопку "Анализировать", чтобы мгновенно получить прогнозируемое настроение и соответствующую оценку от 1 до 10.
 
-### Скриншоты
+### Скриншоты(в работе)
 * **Рекомендация:** Этот раздел очень важен! **Пожалуйста, замените этот текст высококачественными скриншотами или GIF-анимацией, демонстрирующими ваше приложение.**
 * **Что включить:**
     * Скриншот начальной страницы выбора модели.
@@ -337,5 +334,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Этот проект распространяется под лицензией MIT — подробности см. в файле [LICENSE](LICENSE).
 
 ### Контакты
-* **[Ваше имя]**
-* **LinkedIn:** https://www.linkedin.com/pulse/k%C4%81-izveidot-linkedin-profilu-lai-darbs-atrastu-tevi-pats-berzina
+* **Кожуховский Дмитрий
+* **
+* **Links:** 
