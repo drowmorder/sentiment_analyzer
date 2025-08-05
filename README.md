@@ -102,23 +102,24 @@ Follow these steps to get the project up and running locally:
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
     ```
 5.  **Install Dependencies:**
+   Update your pip if needed!
     ```bash
     pip install -r requirements.txt
     ```
 
-6.  **Download GloVe Embeddings:**
+7.  **Download GloVe Embeddings:**
     The CNN model requires specific pre-trained GloVe embeddings (`glove.6B.100d.txt`).
     * Download `glove.6B.zip` from the [GloVe website (Stanford NLP)](https://nlp.stanford.edu/projects/glove/).
     * Extract the `glove.6B.100d.txt` file from the downloaded zip.
     * **Place the `glove.6B.100d.txt` file into the `data/` directory within your cloned project.** (e.g., `[YOUR_REPO_NAME]/data/glove.6B.100d.txt`)
 
-7.  **Run Django Migrations:**
+8.  **Run Django Migrations:**
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     ```
 
-8.  **Start the Django Development Server and Open Application:**
+9.  **Start the Django Development Server and Open Application:**
     * **Option A (Recommended for Windows): Use the provided batch script:**
         After completing the above steps, simply double-click the `start_server.bat` file located in the project root. This script will automatically start the Django development server and open the application's starting page in your default web browser.
     * **Option B (Manual): Run the server and open browser separately:**
@@ -263,23 +264,24 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    ```
 
 3.  **Установите зависимости:**
+   Обновите pip если требуется!
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Загрузите эмбеддинги GloVe:**
+5.  **Загрузите эмбеддинги GloVe:**
     Модель CNN требует определенных предварительно обученных эмбеддингов GloVe (`glove.6B.100d.txt`).
     * Загрузите `glove.6B.zip` с [веб-сайта GloVe (Stanford NLP)](https://nlp.stanford.edu/projects/glove/).
     * Распакуйте файл `glove.6B.100d.txt` из загруженного архива.
     * **Поместите файл `glove.6B.100d.txt` в директорию `data/` внутри вашего клонированного проекта.** (например, `[ИМЯ_ВАШЕГО_РЕПОЗИТОРИЯ]/data/glove.6B.100d.txt`)
 
-5.  **Выполните миграции Django:**
+6.  **Выполните миграции Django:**
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     ```
 
-6.  **Запустите сервер разработки Django и откройте приложение:**
+7.  **Запустите сервер разработки Django и откройте приложение:**
     * **Вариант А (Рекомендуется для Windows): Используйте предоставленный batch-скрипт:**
         После выполнения вышеуказанных шагов просто дважды щелкните файл `start_server.bat`, расположенный в корне проекта. Этот скрипт автоматически запустит сервер разработки Django и откроет стартовую страницу приложения в вашем браузере по умолчанию.
     * **Вариант Б (Вручную): Запустите сервер и откройте браузер отдельно:**
