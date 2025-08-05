@@ -19,18 +19,14 @@ CNN_tokenizer = None
 
 SUPPORTED_MODELS = ['CNN_model.pt', 'lr_model.joblib', 'rf_model.joblib']
 
-try:
-    nltk.data.find('tokenizers/punkt')
-except nltk.downloader.DownloadError:
-    nltk.download('punkt')
-try:
-    nltk.data.find('corpora/stopwords')
-except nltk.downloader.DownloadError:
-    nltk.download('stopwords')
-try:
-    nltk.data.find('corpora/wordnet')
-except nltk.downloader.DownloadError:
-    nltk.download('wordnet')
+required_nltk_data = ['punkt', 'stopwords', 'wordnet', 'averaged_perceptron_tagger', 'punkt_tab']
+
+for data in required_nltk_data:
+    try:
+        nltk.data.find(f'tokenizers/{data}')
+    except LookupError:
+        print(f"NLTK data '{data}' not found. Downloading...")
+        nltk.download(data)
 
 def load_models():
     global cnn_model, lr_model, tfidf_vectorizer, CNN_tokenizer
