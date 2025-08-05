@@ -137,35 +137,36 @@ Follow these steps to get the project up and running locally:
 
 ### Project Structure
 .
-├── IMDb-Movie-Review-Sentiment-Analyzer/
-│   ├── sentiment_app/         # Django app: views, URLs, templates, ML integration logic
-│   │   ├── migrations/
-│   │   ├── templates/         # HTML templates for the web interface
-│   │   ├── static/            # Static files (CSS, JS, images)
-│   │   ├── init.py
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── models.py
-│   │   ├── urls.py
-│   │   ├── views.py
-│   │   └── utils.py          # (e.g., contains text preprocessing functions, rating calculation)
-│   ├── [YOUR_DJANGO_PROJECT_ROOT_FOLDER_NAME]/ # Django project settings folder (e.g., mysite/ or config/)
-│   │   ├── init.py
-│   │   ├── asgi.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   └── wsgi.py
-│   ├── data/                 # Folder for datasets, vocabulary, and GloVe embeddings
-│   │   ├── glove.6B.100d.txt
-│   │   └── # other data files like vocabulary, etc.
-│   ├── models/               # Folder for saved ML models (.joblib for LR, .pt for CNN)
-│   │   ├── lr_model.joblib
-│   │   └── CNN_model.pt
-│   ├── manage.py             # Django project entry point
-│   ├── requirements.txt      # Python dependencies list
-│   ├── start_server.bat      # Convenience script for Windows users to start server and open browser
-│   └── .gitignore            # Files/folders ignored by Git
-└── README.md
+
+├── IMDb-Movie-Review-Sentiment-Analyzer/<br/>
+│   ├── sentiment_app/         # Django app: views, URLs, templates, ML integration logic<br/>
+│   │   ├── migrations/<br/>
+│   │   ├── templates/         # HTML templates for the web interface<br/>
+│   │   ├── static/            # Static files (CSS, JS, images)<br/>
+│   │   ├── init.py<br/>
+│   │   ├── admin.py<br/>
+│   │   ├── apps.py<br/>
+│   │   ├── models.py<br/>
+│   │   ├── urls.py<br/>
+│   │   ├── views.py<br/>
+│   │   └── utils.py          # (e.g., contains text preprocessing functions, rating calculation)<br/>
+│   ├── [YOUR_DJANGO_PROJECT_ROOT_FOLDER_NAME]/ # Django project settings folder (e.g., mysite/ or config/)<br/>
+│   │   ├── init.py<br/>
+│   │   ├── asgi.py<br/>
+│   │   ├── settings.py<br/>
+│   │   ├── urls.py<br/>
+│   │   └── wsgi.py<br/>
+│   ├── data/                 # Folder for datasets, vocabulary, and GloVe embeddings<br/>
+│   │   ├── glove.6B.100d.txt<br/>
+│   │   └── # other data files like vocabulary, etc.<br/>
+│   ├── models/               # Folder for saved ML models (.joblib for LR, .pt for CNN)<br/>
+│   │   ├── lr_model.joblib<br/>
+│   │   └── CNN_model.pt<br/>
+│   ├── manage.py             # Django project entry point<br/>
+│   ├── requirements.txt      # Python dependencies list<br/>
+│   ├── start_server.bat      # Convenience script for Windows users to start server and open browser<br/>
+│   └── .gitignore            # Files/folders ignored by Git<br/>
+└── README.md<br/>
 
 ### Additional Resources
 * **Exploratory Data Analysis (EDA) Notebook:** Explore the initial data analysis, preprocessing steps, and insights in the `data/SA_EDA/SentimentAnalysis.ipynb` Jupyter Notebook. This provides a deeper dive into the dataset and feature engineering.
@@ -290,35 +291,36 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Структура проекта
 .
-├── IMDb-Movie-Review-Sentiment-Analyzer/
-│   ├── sentiment_app/         # Приложение Django: представления, URL-адреса, шаблоны, логика интеграции ML
-│   │   ├── migrations/
-│   │   ├── templates/         # HTML-шаблоны для веб-интерфейса
-│   │   ├── static/            # Статические файлы (CSS, JS, изображения)
-│   │   ├── init.py
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── models.py
-│   │   ├── urls.py
-│   │   ├── views.py
-│   │   └── utils.py          # (например, содержит функции предобработки текста, расчет рейтинга)
-│   ├── [ИМЯ_ВАШЕЙ_КОРНЕВОЙ_ПАПКИ_ПРОЕКТА_DJANGO]/ # Папка настроек проекта Django (например, mysite/ или config/)
-│   │   ├── init.py
-│   │   ├── asgi.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   └── wsgi.py
-│   ├── data/                 # Папка для наборов данных, словаря и эмбеддингов GloVe
-│   │   ├── glove.6B.100d.txt
-│   │   └── # другие файлы данных, такие как словарь и т. д.
-│   ├── models/               # Папка для сохраненных моделей ML (.joblib для LR, .pt для CNN)
-│   │   ├── lr_model.joblib
-│   │   └── CNN_model.pt
-│   ├── manage.py             # Точка входа проекта Django
-│   ├── requirements.txt      # Список зависимостей Python
-│   ├── start_server.bat      # Удобный скрипт для пользователей Windows для запуска сервера и открытия браузера
-│   └── .gitignore            # Файлы/папки, игнорируемые Git
-└── README.md
+
+├── IMDb-Movie-Review-Sentiment-Analyzer/<br/>
+│   ├── sentiment_app/         # Приложение Django: представления, URL-адреса, шаблоны, логика интеграции ML<br/>
+│   │   ├── migrations/<br/>
+│   │   ├── templates/         # HTML-шаблоны для веб-интерфейса<br/>
+│   │   ├── static/            # Статические файлы (CSS, JS, изображения)<br/>
+│   │   ├── init.py<br/>
+│   │   ├── admin.py<br/>
+│   │   ├── apps.py<br/>
+│   │   ├── models.py<br/>
+│   │   ├── urls.py<br/>
+│   │   ├── views.py<br/>
+│   │   └── utils.py          # (например, содержит функции предобработки текста, расчет рейтинга)<br/>
+│   ├── [ИМЯ_ВАШЕЙ_КОРНЕВОЙ_ПАПКИ_ПРОЕКТА_DJANGO]/ # Папка настроек проекта Django (например, mysite/ или config/)<br/>
+│   │   ├── init.py<br/>
+│   │   ├── asgi.py<br/>
+│   │   ├── settings.py<br/>
+│   │   ├── urls.py<br/>
+│   │   └── wsgi.py<br/>
+│   ├── data/                 # Папка для наборов данных, словаря и эмбеддингов GloVe<br/>
+│   │   ├── glove.6B.100d.txt<br/>
+│   │   └── # другие файлы данных, такие как словарь и т. д.<br/>
+│   ├── models/               # Папка для сохраненных моделей ML (.joblib для LR, .pt для CNN)<br/>
+│   │   ├── lr_model.joblib<br/>
+│   │   └── CNN_model.pt<br/>
+│   ├── manage.py             # Точка входа проекта Django<br/>
+│   ├── requirements.txt      # Список зависимостей Python<br/>
+│   ├── start_server.bat      # Удобный скрипт для пользователей Windows для запуска сервера и открытия браузера<br/>
+│   └── .gitignore            # Файлы/папки, игнорируемые Git<br/>
+└── README.md<br/>
 
 ### Дополнительные ресурсы
 * **Ноутбук с EDA (исследовательским анализом данных):** Изучите первоначальный анализ данных, шаги предобработки и выводы в Jupyter Notebook `data/SA_EDA/SentimentAnalysis.ipynb`. Это дает более глубокое представление о наборе данных и инженерии признаков.
