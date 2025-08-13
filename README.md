@@ -134,13 +134,8 @@ Follow these steps to get the project up and running locally:
 3.  Enter the movie review text into the provided text area.
 4.  Click the "Analyze" button to instantly receive the predicted sentiment and the corresponding 1-10 rating.
 
-### Screenshots (incoming)
-* **Recommendation:** This section is crucial! **Please replace this text with high-quality screenshots or a GIF demonstrating your app.**
-* **What to include:**
-    * A screenshot of the initial model selection page.
-    * A screenshot of the analysis input page (with an example review typed in).
-    * A screenshot of the results page, clearly showing the sentiment and rating.
-    * (Optional but great) A short GIF showing the flow from input to output for one review.
+### Screenshots 
+![Demo of the app](data/assets/my-app-demo.gif)
 
 ### Project Structure
 .
@@ -190,7 +185,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Contact
 * **Kozhukhovskiy Dmitriy**
-* **Links:** [Your link URL]
+* **Links:** [URL]
 
 ---
 
@@ -296,13 +291,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3.  Введите текст рецензии фильма в предоставленную текстовую область.
 4.  Нажмите кнопку "Анализировать", чтобы мгновенно получить прогнозируемое настроение и соответствующую оценку от 1 до 10.
 
-### Скриншоты(в работе)
-* **Рекомендация:** Этот раздел очень важен! **Пожалуйста, замените этот текст высококачественными скриншотами или GIF-анимацией, демонстрирующими ваше приложение.**
-* **Что включить:**
-    * Скриншот начальной страницы выбора модели.
-    * Скриншот страницы ввода для анализа (с введенным примером рецензии).
-    * Скриншот страницы результатов, четко показывающий настроение и оценку.
-    * (Необязательно, но очень хорошо) Короткая GIF-анимация, показывающая поток от ввода до вывода для одной рецензии.
+### Скриншоты
+![Демо](assets/my-app-demo.gif)
 
 ### Структура проекта
 .
@@ -351,6 +341,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Этот проект распространяется под лицензией MIT — подробности см. в файле [LICENSE](LICENSE).
 
 ### Контакты
-* **Кожуховский Дмитрий
-* **
-* **Links:** 
+* **Кожуховский Дмитрий**
+* **Links:** [URL]
