@@ -292,7 +292,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4.  Нажмите кнопку "Анализировать", чтобы мгновенно получить прогнозируемое настроение и соответствующую оценку от 1 до 10.
 
 ### Скриншоты
-![Демо](assets/demo-video.gif)
+![Демо](data/assets/demo-video.gif)
 
 ### Структура проекта
 .
