@@ -135,7 +135,7 @@ Follow these steps to get the project up and running locally:
 4.  Click the "Analyze" button to instantly receive the predicted sentiment and the corresponding 1-10 rating.
 
 ### Screenshots 
-![Demo of the app](data/assets/my-app-demo.gif)
+![Demo of the app](data/assets/demo-video.gif)
 
 ### Project Structure
 .
@@ -292,7 +292,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4.  Нажмите кнопку "Анализировать", чтобы мгновенно получить прогнозируемое настроение и соответствующую оценку от 1 до 10.
 
 ### Скриншоты
-![Демо](assets/my-app-demo.gif)
+![Демо](assets/demo-video.gif)
 
 ### Структура проекта
 .
